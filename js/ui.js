@@ -4,641 +4,241 @@ export const renderHomePage = () => {
 
     container.innerHTML = "";
     const home = document.createElement("div");
-    home.innerHTML = `
-    <section class="slogan">
-    <div class="background-image" style="background-image: url(assets/images/krevet.jpeg);"></div>
-    <div class="slogan-content-area">
-        <p>Salon nameštaja</p>
-        <h1>Comfort MG</h1>
-        <p>Za udobniji život - nameštaj Comfort MG</p>
-    </div>
-</section>
+    home.innerHTML =
+        `
 
-<section class="contact">
-    <ul class="grid">
-        <li>
-            <h3>Radno vreme</h3>
-        </li>
-        <li>Leti:</li>
-        <li>Ponedeljak - petak: 8:00 - 20:00h</li>
-        <li>Subota: 8:00 - 17:00h</li>
-        <li>Zimi:</li>
-        <li>Ponedeljak - petak: 8:00 - 19:00h</li>
-        <li>Subota: 8:00 - 16:00h</li>
-    </ul>
-
-    <ul>
-        <li>
-            <h3>Adresa</h3>
-        </li>
-        <li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.9625749349807!2d19.681688715955318!3d44.76117797909896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475bcaf878441d99%3A0x87ae94c11fe80ce1!2zTWHEjXZhbnNrYSA3NywgxaBhYmFjIDE1MDAw!5e0!3m2!1sen!2srs!4v1534759055307"
-                width="220" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </li>
-    </ul>
-
-    <div class="grid" id="info">
-        <h3 class="contact">Kontakt</h3>
-        <ul class="telefon">
-            <li>Tel: 065/ 5255 - 864</li>
-            <li>Tel: 065/ 2032 - 026</li>
-
-            <li>Email: comfortmg@outlook.com</li>
-            <li>
-                <p>Pronađite nas na društvenim mrežama</p>
-                <a href="https://www.facebook.com/namestajcomfortmg/"<i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://www.instagram.com/explore/locations/1043848782426524/comfort-mg-namestaj/"<i class="fab fa-instagram fa-2x"></i> </a>
-            </li>
-        </ul>
-    </div>
-    </div>
-</section>
-    `;
-    container.appendChild(home);
-}
-
-export const renderFurnitureMenu = () => {
-
-    container.innerHTML = "";
-
-    const menu = document.createElement("div");
-    menu.setAttribute("class", "furniture-menu");
-    menu.innerHTML = `
-    <ul class="list-one">
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="decije-sobe furniture-photo">
-            </div>
-            <span class="decije-sobe">Dečije sobe</span>
-        </li>
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="dnevne-sobe furniture-photo">
-            </div>
-            <span class="dnevne-sobe">Dnevne sobe</span>
-        </li>
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/sto.jpg"class="klub-stolovi furniture-photo">
-            </div>
-            <span class="klub-stolovi">Klub stolovi</span>
-        </li>
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="kreveti-masiv furniture-photo">
-            </div>
-            <span class="kreveti-masiv">Kreveti od masiva</span>
-        </li>
-    </ul>
-    <ul class="list-two">
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="kuhinje furniture-photo">
-            </div>
-            <span class="kuhinje">Kuhinje</span>
-        </li>
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="ormari furniture-photo">
-            </div>
-            <span class="ormari">Ormari</span>
-        </li>
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/polica.jpg"class="police furniture-photo">
-            </div>
-            <span class="police">Police</span>
-        </li>
-        <li class="furniture">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="predsoblja furniture-photo">
-            </div>
-            <span class="predsoblja">Predsoblja</span>
-        </li>
-    </ul>
-    `;
-    container.appendChild(menu);
-}
-
-export const renderAction = () => {
-
-    container.innerHTML = "";
-    const action = document.createElement("div");
-    action.setAttribute("class", "action-btn");
-    action.innerHTML = `
-    <h5>Proizvodi na akciji:</h5>   
-    <ul class="sale-list">
-        <li class="sale-photo">
-            <img src="../assets/images/action1.jpg" class="a1" dimenzije="500x400" cena="19999 din" opis-proizvoda="fdsfdsfdssfdsdfsfdfds">
-            <h5>Stara cena:3902903 maraka</h5>
-            <h4>Nova cena:1 marka</h4>
-        </li>
-        <li class="sale-photo">
-            <img src="../assets/images/action2.jpg">
-            <h5>Stara cena:3902903 maraka</h5>
-            <h4>Nova cena:1 marka</h4>
-        </li>
-        <li class="sale-photo">
-            <img src="../assets/images/action4.jpg">
-            <h5>Stara cena:3902903 maraka</h5>
-            <h4>Nova cena:1 marka</h4>
-        </li>
-    </ul>
-    `;
-    container.appendChild(action);
-
-    const elems = document.querySelectorAll('.carousel');
-    const instances = M.Carousel.init(elems); 
-} 
-
-export const renderActionPhoto = (event) => {
-
-    const a = event.target;
-    const dimenzije = a.getAttribute("dimenzije");
-    const cena = a.getAttribute("cena");
-    const opis = a.getAttribute("opis-proizvoda");
-    const url = a.getAttribute("src");
-    
-    const product = {
-        photoUrl: url,
-        dimensions: dimenzije,
-        price: cena,
-        summary: opis
+        <section class="home-title">
+        <div class="hometitle-content-area">
+        <h2>Dobrodosli na nas sajt</h2>
+        <p>Ovdje mozete pronaci sve informacije o bolestima zavisnosti, kao i institucije koje vam mogu pruziti pomoc.</p>
+        </div>
+        <img src="assets/images/bolja.jpg" class="img-top">
+        </section>
+        `
+        container.appendChild(home);
     }
+    
+    // <div class="background-image" style="background-image: url(assets/images/bolja.jpg);"></div>
 
+export const renderDrugsPage = () => {
     container.innerHTML = "";
-
-    const singlePhoto = document.createElement("div");
-    singlePhoto.innerHTML= `
-        <a href="#" class="back-to-action"><i class="fas fa-angle-double-left "></i>Nazad na akciju</a>
-        <div>
-            <img src="${product.photoUrl}" alt="Slika proizvoda">
-        </div>
-        <p>
-            Dimenzije: ${product.dimensions}
-        </p>
-        <p>
-            Cena: ${product.price}
-        </p>
-        <p>
-            ${product.summary}
-        </p>
-    `;
-    container.appendChild(singlePhoto);
-}
-
-export const renderAbout = () => {
-
-    container.innerHTML = "";
-    const about = document.createElement("div");
-    about.innerHTML = `
-    <h2 id="about-title">Salon nameštaja Comfort MG</h2>
+    const drugs = document.createElement("div");
+    drugs.innerHTML = `
+    <h2>Narkomanija</h2>
     <p>
-        Nakon dugogodišnjeg iskustva i rada odlučili smo da 11.3.2017. pokrenemo nešto novo u gradu, tada je zvanično otvoren salon nameštaja Comfort MG. 
-        Bavimo se izradom pločastog nameštaja od iverice i medijapana po meri i želji kupaca. U našoj ponudi možete pronaći kuhinje, ormare, predsoblja, dnevne sobe, regale i još mnogo toga. Kod nas ćete dobiti 3D prikaz i idejno rešenje za Vaš dom. Od projektovanja do izrade i montaže elemenata, sve to Vam nudimo potpuno besplatno ukoliko odlučite da sarađujete sa nama. 
-        U saradnji sa drugim proizvođačima nudimo Vam i tapacirani nameštaj po pristupačnim cenama.
-        Ukoliko Vam je potrebna popravka, prepravka ili montaža pločastog nameštaja od iverice i medijapana možete nas kontaktirati. 
-        S poštovanjem, 
-        Vaš Comfort MG
+    Narkomanija predstavlja stanje periodičnog ili dugotrajnog korišćenja psihoaktivnih supstanci. Ovo stanje prelazi u trovanje koje je prouzrokovano ponavljanim uzimanjem droga i koje je štetno za pojedinca, ali i za društvo. Svetska zdravstvena organizacija 1957. godine definisala je narkomaniju kao ''stanje periodične ili hronične intoksinacije izazvano ponovljenim unošenjem droge ''. Narkomanija se ispoljava kroz psihičku i fizičku zavisnost i veliku želju da se nastavi sa uzimanjem droge.
     </p>
-    `;
-    container.appendChild(about);
+    <h4>Šta je droga?</h4>
+<p>U širem smislu pod terminom  "droga" podrazumevaju se materije biljnog, hemijskog ili životinjskog porekla koje služe za izradu lekova. U užem smislu, koji se češće koristi, pod terminom droga podrazumeva se psihoaktivna supstanca, koja, kada je uneta u organizam može da promeni stanje svesti i utiče na psihičke i fizičke funkcije. Dejstvo droge je različito u zavisnosti od toga ko drogu konzumira i na različiti način se manifestuje.</p>
+
+<h4>Najčešći oblici antisocijalnog ponašanja narkomana:</h4>
+<ol>
+ <li>zapostavljanje lične higijene;</li>
+ <li>laganje i obmanjivanje</li>
+ <li>zapostavljanje ranijih interesovanja/školovanja;</li>
+ <li>otuđenje stvari;</li>
+ <li>krađa;</li>
+<li> prosjačenje;</li>
+ <li>obijanje apoteka/prodavnica/trafika;</li>
+ <li>prostituisanje;</li>
+ <li>distribucija droge (dilovanje);</li>
+<li> neovlašćena proizvodnja, prerada i prodaja droga;</li>
+<li>krijumčarenje;</li>
+ <li>falsifikovanje recepata.</li>
+ </ol>
+ <h4>Najčešći mentalni poremećaji kod narkomana:</h4>
+<ul>
+ <li>psihopatološke pojave (vizije, iluzije, halucinacije, strah, dezorijentisanost, panika,...);</li>
+ <li>depresija</li>
+ <li>pokušaji samoubistva</li>
+ <li>psihoze</li>
+ <li>karakterne promene.</li>
+</ul>
+    `
+    container.appendChild(drugs);
 }
 
-export const renderContact = () => {
-
+export const renderAlcoholismPage = () => {
     container.innerHTML = "";
-    const contact = document.createElement("div");
-    contact.setAttribute("class", "container contact-div");
-    contact.innerHTML = `
-    <div class="contact-container">
-        <div class="contact-info">
-            <h3>Kontakt</h3>
-            <p><i class="fas fa-mobile-alt"></i> 065/ 5255 - 864</p>
-            <p><i class="fas fa-mobile-alt"></i> 065/ 2032 - 026</p>
-            <p><i class="far fa-envelope"></i>comfortmg@outlook.com</p>
-            <p> 
-            <a href="https://www.facebook.com/namestajcomfortmg/"<i class="fab fa-facebook fa-2x"></i></a>
-            <a href="https://www.instagram.com/explore/locations/1043848782426524/comfort-mg-namestaj/"<i class="fab fa-instagram fa-2x"></i> </a>
-            </p>
-        </div>
-        <div class="contact-map">
-            <p>
-            <i class="fas fa-map-marker-alt"></i> Mačvanska 77, Šabac
-            </p>
-        <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.9625749349807!2d19.681688715955318!3d44.76117797909896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475bcaf878441d99%3A0x87ae94c11fe80ce1!2zTWHEjXZhbnNrYSA3NywgxaBhYmFjIDE1MDAw!5e0!3m2!1sen!2srs!4v1534759055307"
-            width="220" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </p>
-        </div>
-    </div>
-    <form class="contact-form">
-        <p>Ime i prezime</p>
-        <input type = "text" placeholder = "Ime i prezime" class="full-name" required/> 
-        <p>Email</p> 
-        <input type="email" placeholder = "mail@gmail.com" class="email" name="emailaddress" required/> 
-        <p>Poruka</p> 
-        <textarea cols="20" rows="10" class="message" required>
-        </textarea>
-        <input type="button" value="POŠALJI" class="contact-button"/>
-    </form>
-    `;
-    container.appendChild(contact);
+    const alcoholism = document.createElement("div");
+    alcoholism.innerHTML = `
+    <h2>Alkoholizam</h2>
+    <p>Alkoholizam je jedna od najrasprostranjenijih bolesti zavisnosti, odnosno toksikomanija. Po pravilu alkoholizam je psihogenog porekla ali uz znatan uticaj situacionih faktora zbog čega je ranije smatran porokom a ne bolešću. Ispoljava se kao gubitak sposobnosti uzdržavanja od prekomerne upotrebe alkohola, što dovodi do zavisnosti, narušavanja psihičkog i fizičkog zdravlja i socijalnih odnosa. Po rasprostranjenosti i štetnim posledicama po zdravlje, alkoholizam je odmah posle bolesti kardiovaskularnog sistema i malignih oboljenja. Zbog navedenih razloga u većini zemalja je obuhvaćen zdravstvenim osiguranjem kao bolest zavisnosti.</p>
+   <h4> Kako alkohol deluje? </h4>
+<p>Reakcije na alkohol su individualne, tako da se mogu veoma razlikovati od osobe do osobe. Takođe reakcije zavise od organizma svake osobe, njenih godina, pola, zdravstvenog stanja, psihološkog stanja i naručito od unesene količine alkohola.<p>
+<br>
+
+<p>Kada se popije, piće ulazi u stomak, gde se apsorbuje i ulazi u krvotok. Krvotok distribuira alkohol po čitavom telu, ali se efekat najviše primećuje u mozgu. Prisustvo ili odsustvo hrane u stomaku je najvažniji činilac kod apsorpcije alkohola.</p>
+<br>
+<h6>Koncentracija alkohola u krvi može biti i tri puta veća kod osoba sa praznim stomakom, nego ista ta količina alkohola popijena na pun stomak.</h6>
+<br>
+
+<p>Dok pije, osoba oseća zadovoljstvo i opušta se. Alkohol potpomaže lučenje dopamina (neurotransmiter koji je odgovoran za osećaj sreće i zadovoljstva), ali samo dok se koncentracija alkohola u krvi penje. To obično traje neko kraće vreme, osoba postaje pričljiva i društvena. Kad telo kreće da eliminiše alkohol iz tela, ovo osećanje biva zamenjeno sedacijom, te osoba postaje tiha i povlači se. Da bi izbegli ovaj efekat, većina ljudi nastavlja da pije, da bi održavala prvobitno stanje zadovoljstva. Na taj način ne iščezava koncentracija alkohola u krvi koja dalje izaziva neželjene efekte, već se taloži i raste.</p>
+
+<h4>5 mentalnih sposobnosti je sklono oštećenjima od upotrebe alkohola </h4>
+<h4>Memorija</h4>
+
+<p>U pitanju je mogućnost formiranja novih sećanja, dok sećanje na prethodno se odvija neometeno.</p>
+
+<h4>Abstraktno razmišljanje</h4>
+
+<p>Podrazumeva interpretaciju značenja, geometriju, algebru, razmišljanje o bilo čemu van konkretnih objekata i stvari koje vidimo oko nas.</p>
+
+<h4>Pažnja i koncentracija</h4>
+
+<p>Ne mora biti očigledna, ali se obično pokazuje pri zadacima koji zahtevaju ove funkcije.</p>
+
+<h4>Rešavanje problema</h4>
+
+<p>Rešavanje problema podrazumeva promenu u strategiji pristupa problemima, mentalnu fleksibilnost. Hronično pijenje ubija sposobnost promene direkcije u mišljenju koja je neophodna ze efikasno rešavanje problema.</p>
+
+<h4>Percepcija emocija</h4>
+
+<p>Deo mozga koji je odgovoran za tačno čitanje tuđih emocija se pokazao kao vulnerabilan na alkohol, tako da se pri hroničnom alkoholizmu gubi ova sposobnost.</p>
+
+<h4>Da li sam alkoholičar?</h4>
+<br>
+<br>
+<p>Postoji upotreba alkohola, zloupotreba alkohola i zavisnost od alkohola.</p>
+<br>
+<p>Zloupotreba alkohola podrazumeva upotrebu alkohola koja predstavlja rizik po zdravlje osobe i dovodi do određenih problema u ponašanju i sa drugim ljudima.</p>
+<br>
+<p>Zavisnost uključuje i potrebu za alkoholom nad kojom osoba gubi kontrolu, kao i fizičke simptome i pojavu krize kada alkohola nema. Nakon sat vremena bez pića već se javljaju simptomi kao što su tremor (trešenje), anksioznost, poremećaj spavanja, a u težim slučajevima halucinacije i epileptički napadi.
+</p>
+<p>
+Ljudi obično smatraju da je neko alkoholičar ako puno pije. Ali to nije zapravo istina. Alkoholizam je karakterističan po gubitku kontrole, a ne količini pića. Vrlo često, alkoholičari piju, ali se ni ne napiju.
+</p>
+<br>
+<p>Svako može postati alkoholičar.</p>
+<br>
+<p>Produžena upotreba alkohola utiče na mozak, menja ga i pravi zavisnost. Iako možemo teoretisati o tome koje osobe su podložnije alkoholizmu i sl., svaka osoba može uneti dovoljno alkohola u svoj sistem u produženom vremenskom trajanju i time da razvije alkoholnu zavisnost.</p>
+
+<p>Svako ko pije više od 3 pića dnevno je na granici alkoholizma.</p>
+
+<p>Posebno su u riziku osobe koje piju da bi se smirile, zaboravile na probleme i regulisale svoja emotivna stanja.</p>
+    `
+    container.appendChild(alcoholism);
 }
 
-export const renderKidsRoom = () => {
+export const renderGamblingPage = () => {
+    container.innerHTML = "";
+    const gamble = document.createElement("div");
+    gamble.innerHTML = `
+    <h2>Kockanje</h2>
+    <p>Kao što se zavisnost od heroina smatra najtežom zavisnošću kada su droge u pitanju, tako se i kockanje smatra najtežom bihevioralnom zavisnošću. </p>
+    <br>
+    Patološko kockanje se smatra najtežim oblikom nehemijske zavisnosti.
+    <br>
+    <p>U najvećem broju slučajeva ova zavisnost počinje u periodu adolescencije i mlađem odraslom dobu. Patološko kockanje je više zastupljeno kod muškaraca nego kod žena. Kod muških kockara primetno je da se češće socijalno izoluju, nego što to čine ženski kockari. Isto tako, muški kockari češće pribegavaju tretmanu kako bi rešili problem nego ženski.</p>
+    <br>
+    <p>Kao i zavisnost od psihoaktivnih supstanci, i zavisnost od kockanja ima hronični, recidivirajući tok, sa mogućnošću spontanog oporavka bez formalnog lečenja.</p>
+    <br>
+    <h4>Neki od pokazatelja patološkog kockanja:</h4>
+    <ul><li>
+    <li>Preokupiranost kockanjem</li>
     
-    container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.setAttribute("class","kids-room-list")
-    kidsList.innerHTML = `
+    <li>Potreba da se kocka sa sve većim iznosima kako bi se postigli isti efekti</li>
+    
+    <li>Neuspešni pokušaji da se prekine sa kockanjem, gubitak kontrole</li>
+    
+    <li>Neuspeh da se smanji kockanje</li>
+    
+    <li>Nervoza i nemir u koliko se pokušava smanjiti kockanje</li>
+    
+    <li>Kockanje se koristi kao beg od problema i lošeg raspoloženje</li>
+    
+    <li>Kockanju se vraća kako bi se „povratili dugovi“</li>
+    
+    <li>Laganje, obmanjivanje prijatelja i porodice
+    
+    <li>Pribegavanje kriminalnim delima</li>
+    
+    <li>Uništavanje veza zbog kockanja</li>
+    
+    <li>Oslanjanje na druge radi izlaska iz očajne finansijske situacije.</li>
+    </ul>
+    <br>
+    <h4>Posledice zavisnosti od kockanja</h4>
+    <br>
+<p>Kockanje, kao i sve ostale zavisnosti, ometa život pojedinca, a svakako utiče i na celu porodicu.</p>
+<br>
+<p>Ove aktivnosti oduzimaju veoma puno energije i vremena, a zavisnik je sve manje u kontaktu sa drugim ljudima. Kao i kod uzimanja psihoaktivnih supstanci i ova vrsta zavisnosti je kobna po pojedinca – i kod njih se javljaju finansijski i bračni problemi, smanjena bliskost i poverenje u porodici, zapostavljanje profesionalnih i drugih obaveza, bavljenje ilegalnim aktivnostima.</p>
+<br>
+<p>Veliki procenat kockara ima ozbiljne probleme sa alkoholom i drogama (do 60%), a često su oboleli i od depresije (čak 75%). Kockanje je povezano i sa većim zdravstvenim problemima kao što su srčani problemi i oboljenja jetre. Zavisnosti poput kockanja mogu biti povezani i sa rizikom po život pojedinca. Po jednom istraživanju 48% kockara je u nekom trenutku imalo suicidalnu nameru. Broj pokušaja i izvršenja samoubistva kod kockara takođe nije zanemarljiv.</p>
+<br>
+<p>Ozbiljni psihički i fizički problemi koje imaju zavisnici od kocke utiču na još osam do deset drugih lica koji su u neposrednom okruženju kockara.</p>
 
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-
-   
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-  
-    `;
-    container.appendChild(kidsList);
+<h4>  Da li sam zavisan od kockanja?</h4>
+<p>Kockanje kao zavisnost loše utiče na život kockara. Kao i drugi zavisnici kockari najveći deo svog vremena troše na razmišljanje o kockanju, na njegovo planiranje, upražnjavanje i oporavak od posledica. Kockar nije u stanju da prestane da razmišlja o kockanju, i ova preokupiranost je opsesivnog karaktera.</p>
+<br>
+<h4>U Srbiji najčešće vrste kockanja koje se upražnjavaju su:</h4>
+<ul>
+<li>Igranje na sreću</li>
+<li>Sportsko klađenje</li>
+<li>Karte</li>
+<li>Poker aparati</li>
+<li>Rulet</li>
+<li>Internet klađenje</li>
+</ul>
+    `
+    container.appendChild(gamble);
 }
 
-export const renderLivingRoom = () => {
-    
+
+// export const bla = () => {
+// var newA = document.createElement("a").
+// newA.setAttribute("href","#").
+// newA.textContent("pa koji tekst hoces");
+// var oldA = document.querySelector(a).
+// oldA.appendChild(newA);
+// }
+
+
+export const renderRehabPage = () => {
     container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.innerHTML = `
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-    `;
-    container.appendChild(kidsList);
+    
+    const h2 = document.createElement("h2");
+    h2.textContent="Klinika za odvikavanje";
+    container.appendChild(h2);
+
+    const newA = document.createElement("a");
+    newA.setAttribute("href", "#");
+    newA.textContent="blabla";
+    const oldA = document.querySelector("a")
+    container.appendChild(newA);
+    
+    const rehab = document.createElement("div");
+    rehab.innerHTML = `
+    <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    </ul>
+    `
+    container.appendChild(rehab);
 }
 
-export const renderClubTables = () => {
-    
-    container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.innerHTML = `
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-    `;
-    container.appendChild(kidsList);
-}
 
-export const renderBed = () => {
-    
-    container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.innerHTML = `
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-    `;
-    container.appendChild(kidsList);
-}
 
-export const renderKitchen = () => {
-    
+export const renderHelpPage = () => {
     container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.innerHTML = `
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-    `;
-    container.appendChild(kidsList);
-}
-
-export const renderCloset = () => {
-    
-    container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.innerHTML = `
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-    `;
-    container.appendChild(kidsList);
-}
-
-export const renderShelves = () => {
-    
-    container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.innerHTML = `
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-    `;
-    container.appendChild(kidsList);
-}
-
-export const renderHallway = () => {
-    
-    container.innerHTML = "";
-    const kidsList = document.createElement("ul");
-    kidsList.innerHTML = `
-        <li class="ds1">
-            <div>
-                <img src="../assets/images/decijasoba.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds2">
-            <div>
-                <img src="../assets/images/dnevna-soba.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds3">
-            <div>
-                <img src="../assets/images/sto.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds4">
-            <div>
-                <img src="../assets/images/krevet.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds5">
-            <div>
-                <img src="../assets/images/kuhinja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds6">
-            <div>
-                <img src="../assets/images/ormar.jpeg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds7">
-            <div>
-                <img src="../assets/images/polica.jpg"class="furniture-photo">
-            </div>
-        </li>
-        <li class="ds8">
-            <div>
-                <img src="../assets/images/predsoblja.jpeg"class="furniture-photo">
-            </div>
-        </li>
-    `;
-    container.appendChild(kidsList);
+    const help = document.createElement("div");
+    help.innerHTML = `
+    <h2>Pomoc</h2>
+<h4>Ukoliko imate neka pitanja obratite nam se putem mejla. Nas savjetnik je tu da vas uputi kako da rijesite probleme.</h4>
+<form method="POST" action="https://formspree.io/natalijamirkovic811@gmail.com">
+<span>Ime i prezime:</span> <input type="text"> 
+<br>
+<span>Email adresa</span>
+<input type="email" name="email"  required><br>
+<span>Vasa poruka:</span>
+<br>
+<textarea name="message"  required></textarea><br>
+  <button type="submit">Send</button>
+</form>
+    `
+    container.appendChild(help);
 }
